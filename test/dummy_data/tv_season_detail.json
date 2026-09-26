@@ -1,0 +1,24 @@
+{
+  "_id": "abc123",
+  "air_date": "2011-04-17",
+  "episodes": [
+    {
+      "air_date": "2011-04-17",
+      "episode_number": 1,
+      "id": 63056,
+      "name": "Winter Is Coming",
+      "overview": "Ned Stark, Lord of Winterfell, learns...",
+      "production_code": "",
+      "runtime": 62,
+      "season_number": 1,
+      "still_path": "/still.jpg",
+      "vote_average": 7.9,
+      "vote_count": 12
+    }
+  ],
+  "name": "Season 1",
+  "overview": "overview",
+  "id": 3624,
+  "poster_path": "/season1.jpg",
+  "season_number": 1
+}

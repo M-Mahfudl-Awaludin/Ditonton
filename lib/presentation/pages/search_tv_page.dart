@@ -1,0 +1,69 @@
+import 'package:ditonton/common/constants.dart';
+import 'package:ditonton/common/state_enum.dart';
+import 'package:ditonton/presentation/bloc/tv_search/tv_search_cubit.dart';
+import 'package:ditonton/presentation/widgets/tv_card_list.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class SearchTVPage extends StatelessWidget {
+  static const ROUTE_NAME = '/search-tv';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Search TV Series'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextField(
+              key: Key('searchFieldTV'),
+              onSubmitted: (query) {
+                context.read<TVSearchCubit>().fetchTVSearch(query);
+              },
+              decoration: InputDecoration(
+                hintText: 'Search title',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(),
+              ),
+              textInputAction: TextInputAction.search,
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Search Result',
+              style: heading6,
+            ),
+            BlocBuilder<TVSearchCubit, TVSearchState>(
+              builder: (_, data) {
+                if (data.state == RequestState.Loading) {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                } else if (data.state == RequestState.Loaded) {
+                  final result = data.searchResult;
+                  return Expanded(
+                    child: ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemBuilder: (_, index) {
+                        final tv = data.searchResult[index];
+                        return TVCard(tv);
+                      },
+                      itemCount: result.length,
+                    ),
+                  );
+                } else {
+                  return Expanded(
+                    child: Container(),
+                  );
+                }
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
