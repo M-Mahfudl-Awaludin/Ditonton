@@ -1,10 +1,7 @@
 # a199-flutter-expert-project
 
-[![CI](https://github.com/USERNAME/REPO_NAME/actions/workflows/ci.yaml/badge.svg)](https://github.com/USERNAME/REPO_NAME/actions/workflows/ci.yaml)
+[![CI](https://github.com/M-Mahfudl-Awaludin/Ditonton/actions/workflows/ci.yaml/badge.svg)](https://github.com/M-Mahfudl-Awaludin/Ditonton/actions/workflows/ci.yaml)
 
-> **Catatan:** ganti `USERNAME/REPO_NAME` di atas dengan path GitHub repo kamu
-> yang sebenarnya (contoh: `mahfudl/a199-flutter-expert-project`) supaya
-> badge menampilkan status build yang benar.
 
 Repository ini merupakan starter project submission kelas Flutter Expert Dicoding Indonesia.
 
@@ -74,7 +71,7 @@ melakukan langkah berikut:
 7. Upload `coverage/lcov.info` sebagai artifact yang bisa diunduh dari tab **Actions**
 
 Kamu bisa melihat riwayat hasil run CI di tab **Actions** pada repository GitHub
-ini: `https://github.com/USERNAME/REPO_NAME/actions`
+ini: `https://github.com/M-Mahfudl-Awaludin/Ditonton/actions`
 
-**Tautan repository:** `https://github.com/USERNAME/REPO_NAME`
+**Tautan repository:** `https://github.com/M-Mahfudl-Awaludin/Ditonton`
 *(ganti dengan tautan repository kamu yang sebenarnya sebelum submit)*
